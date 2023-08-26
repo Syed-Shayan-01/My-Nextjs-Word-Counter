@@ -16,7 +16,7 @@ export default function Home() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className=" max-sm:flex">
       <div className="flex flex-col items-center justify-center mt-40">
         <h1 className="text-2xl font-bold text-blue-500 mb-7">
           {" "}
@@ -34,7 +34,7 @@ export default function Home() {
           cols={80}
           value={value}
           onChange={handleChange}
-          className="p-2.5 text-md text-gray-900
+          className="p-2.5 max-sm:w-full text-md text-gray-900
           bg-gray-50 rounded-lg border border-gray-300
           focus:ring-blue-500 focus:outline-blue-500
           dark:bg-gray-700 dark:border-gray-600
@@ -42,7 +42,7 @@ export default function Home() {
           dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Write your thoughts here..."
         />
-        <div className=" my-3 flex  items-center space-x-10">
+        <div className=" my-3 flex max-sm:flex-col max-sm:items-center    items-center space-x-10">
           <p>
             <span className=" text-blue-500 text-lg font-bold">
               Total Words :
@@ -53,7 +53,7 @@ export default function Home() {
             <span className=" text-blue-500 text-lg font-bold">
               Total Character :
             </span>{" "}
-            <span className=" font-mono ml-2">{value.length}</span>{" "}
+            <span className=" font-mono  max-sm:mr-3.5 ml-2">{value.length}</span>{" "}
           </p>
         </div>
       </div>
